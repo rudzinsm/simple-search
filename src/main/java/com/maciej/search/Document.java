@@ -5,7 +5,7 @@ import org.springframework.util.StringUtils;
 import java.util.*;
 
 public class Document {
-    private String text;
+    private final String text;
 
     public Document(String text) {
         this.text = text;
