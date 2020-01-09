@@ -2,12 +2,12 @@ package com.maciej.search
 
 import spock.lang.Specification
 
-class DocumentTest extends Specification {
+class DocumentSpecification extends Specification {
     def "TokenizeWords"() {
         given:
-            Document doc = new Document("ala lala ma kota ala")
+            Document doc = new Document("doc1","ala lala ma kota ala")
         when:
-           List<String> words = doc.tokenizeWords();
+           List<String> words = doc.tokenizeWords()
         then:
             words.size() == 5
             words[4] == "ala"
@@ -16,9 +16,9 @@ class DocumentTest extends Specification {
 
     def "GetWordsCount"() {
         given:
-        Document doc = new Document("ala lala  ala ma kota  ")
+        Document doc = new Document("doc1","ala lala  ala ma kota  ")
         when:
-        Map<String,Integer> count = doc.getWordsCount();
+        Map<String,Integer> count = doc.getWordsCount()
         then:
         count.size() == 4
         count['ala'] == 2
