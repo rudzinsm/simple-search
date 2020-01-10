@@ -4,13 +4,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class ReversedIndex {
-    private AtomicInteger documentsCount = new AtomicInteger();
+    private Integer documentsCount = 0;
     private Map<String, Word> words = new HashMap<>();
 
-    AtomicInteger getDocumentsCount() {
+    Integer getDocumentsCount() {
         return documentsCount;
     }
 
@@ -31,7 +30,7 @@ public class ReversedIndex {
             words.get(docTerm.getKey()).linkDocument(document);
 
         }
-        documentsCount.incrementAndGet();
+        documentsCount ++;
     }
 
 }

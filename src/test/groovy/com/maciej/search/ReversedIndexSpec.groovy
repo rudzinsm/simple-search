@@ -2,7 +2,6 @@ package com.maciej.search
 
 import spock.lang.Specification
 
-import java.util.concurrent.atomic.AtomicInteger
 import java.util.stream.Collectors
 
 import static org.hamcrest.Matchers.containsInAnyOrder
@@ -60,9 +59,9 @@ class ReversedIndexSpec extends Specification {
         index.addDocument(doc2)
         index.addDocument(doc3)
         when:
-        AtomicInteger result = index.getDocumentsCount()
+        Integer result = index.getDocumentsCount()
         then: 'expect for kot to find three docs'
-        result.get() == 3
+        result == 3
     }
 
 

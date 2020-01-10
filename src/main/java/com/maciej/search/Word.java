@@ -24,7 +24,7 @@ public class Word {
     }
 
     private int documentsCount() {
-        return index.getDocumentsCount().get();
+        return index.getDocumentsCount();
     }
 
     private double getIdf() {
