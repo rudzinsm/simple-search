@@ -54,11 +54,4 @@ class WordSpec extends Specification {
         w.linkedDocuments.isEmpty()
     }
 
-    def "GetLinkedDocuments"() {
-      //  given:
-      //  when:
-      //  then:
-    }
-
-
 }

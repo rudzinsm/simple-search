@@ -29,7 +29,7 @@ class ReversedIndexSpec extends Specification {
         'coś'        || []
     }
 
-    def "GetDocuments - from test"() {
+    def "GetDocuments - example from test"() {
         given:
         def index = new ReversedIndex()
 
@@ -74,7 +74,7 @@ class ReversedIndexSpec extends Specification {
         index.addDocument(doc1)
         index.addDocument(doc2)
 
-        then: 'expect for kot to find three docs'
+        then:
         index.getDocumentsCount().intValue() == 2
 
         that index.getDocuments("ma"), containsInAnyOrder(doc1)
