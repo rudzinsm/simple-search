@@ -2,7 +2,7 @@ package com.maciej.search
 
 import spock.lang.Specification
 
-class DocumentSpecification extends Specification {
+class DocumentSpec extends Specification {
     def "TokenizeWords"() {
         given:
             Document doc = new Document("doc1","ala lala ma kota ala")

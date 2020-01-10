@@ -8,7 +8,7 @@ import java.util.stream.Collectors
 import static org.hamcrest.Matchers.containsInAnyOrder
 import static spock.util.matcher.HamcrestSupport.that
 
-class ReversedIndexTest extends Specification {
+class ReversedIndexSpec extends Specification {
 
     def "GetDocuments"() {
         given:
@@ -46,7 +46,7 @@ class ReversedIndexTest extends Specification {
 
         where:
         word         || documents
-        'brown'      || ["Document 2", "Document 1"]
+        'brown'      || ["Document 1", "Document 2"]
         'fox'        || ["Document 1", "Document 3"]
     }
 

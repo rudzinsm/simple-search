@@ -4,7 +4,7 @@ import static org.hamcrest.Matchers.containsInAnyOrder
 import static spock.util.matcher.HamcrestSupport.that
 import spock.lang.Specification
 
-class WordSpecification extends Specification {
+class WordSpec extends Specification {
 
     def "GetDocuments"() {
         given:
