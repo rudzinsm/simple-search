@@ -76,7 +76,7 @@ public class Word {
 
         @Override
         public int compareTo(Result o) {
-            int comp = tfIdf.compareTo(o.tfIdf);
+            int comp = -1 * tfIdf.compareTo(o.tfIdf);  //reverse order higher number word is more important
             if (comp == 0) {
                 // same value compare by document names
                 return document.getDocumentName().compareTo(o.document.getDocumentName());
